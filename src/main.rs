@@ -21,4 +21,6 @@ fn main() {
     let first_letter: char = 'A';
     println!("First letter of Alphabets is {:?}", first_letter);
 
+    // compound datatypes 
+    // arrays, tuples, string slices
 }
