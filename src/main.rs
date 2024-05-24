@@ -23,4 +23,26 @@ fn main() {
 
     // compound datatypes 
     // arrays, tuples, string slices
+
+    // arrays
+    // int array
+    let numbers: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("Array values are {:?}", numbers);
+
+    // float array
+    let floatarray: [f64; 5] = [1.4, 3.14, 2.3, 5.6, 7.3];
+    println!("Floating array values are {:?}", floatarray);
+
+    //  string array
+    let fruits: [&str; 3] = ["Berries", "Guava", "Pom"];
+    println!("Fruits are {:?}", fruits);
+    println!("First fruit in the Array is {:?}", fruits[0]);
+
+    // tuples
+    let person: (String, i32, bool) = ("Alice".to_string(), 30, false);
+    println!("Person details is {:?}", person);
+
+    // mix of tuples
+    let mix_tuples = ("Kratos", 23, true, [1, 2, 3, 4, 5]);
+    println!("Mix tuple is {:?}", mix_tuples);
 }
