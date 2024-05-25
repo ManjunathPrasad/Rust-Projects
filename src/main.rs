@@ -45,4 +45,29 @@ fn main() {
     // mix of tuples
     let mix_tuples = ("Kratos", 23, true, [1, 2, 3, 4, 5]);
     println!("Mix tuple is {:?}", mix_tuples);
+
+    // slices
+    let number_slices :&[i32] = &[1, 2, 3, 4, 5];
+    println!("Number slices are {:?}", number_slices);
+
+    // string slices
+    let animal_slices :&[&str] = &["elephant", "tiger", "ox"];
+    println!("Animal slices are {:?}", animal_slices);
+
+    let book_slices :&[&str] = &[&"Fiction".to_string(), &"nonfiction".to_string(), &"Mystery".to_string()];
+    println!("Book slices are {:?}", book_slices);
+
+    // string vs string slices
+    // strings [ growable, mutable, owned string type ]
+    let mut stone_cold: String = String::from("cold fire ");
+    stone_cold.push_str("cubes "); 
+    println!("Stone cold slices are {}", stone_cold);
+    stone_cold.push_str("water");
+    println!("Stone cold slices are {}", stone_cold);
+
+    // string slices [ fixed size, immutable, borrowed string type ]
+    let string_variable: String = String::from("Hello world!");
+    let slice_variable: &str = &string_variable;
+    println!("Slice is {}", slice_variable);
 }
+
